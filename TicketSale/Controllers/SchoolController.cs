@@ -9,13 +9,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TicketSale.Models;
+using TicketSale.DataLayer;
 
 namespace TicketSale.Controllers
 {
     public class SchoolController : Controller
     {
-        //private TicketSaleDb db = new TicketSaleDb();
-
         // GET: School
         [HttpGet]
         public ActionResult Index()
@@ -25,15 +24,17 @@ namespace TicketSale.Controllers
         // POST: School
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(string schoolname)
+        public ActionResult Index(SchoolVM school)
         {
+            School.Create(school);
+
             //if (ModelState.IsValid)
             //{
             //    db.SchoolName.Add(schoolname);
             //    db.SaveChanges();
             //    return RedirectToAction("Index");
             //}
-            return View();
+            return View(school);
         }
     }
 }

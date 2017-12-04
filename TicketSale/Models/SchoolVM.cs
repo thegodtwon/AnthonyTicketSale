@@ -6,14 +6,10 @@ using System.Web;
 
 namespace TicketSale.Models
 {
-
-    namespace TicketSale.Models
-    {
-        public class SchoolVM
+       public class SchoolVM
         {
             public int SchoolID { get; set; }
             public string SchoolName { get; set; }
         }
-    }
-    
+        
 }
