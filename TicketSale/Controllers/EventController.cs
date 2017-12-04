@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -27,13 +24,6 @@ namespace TicketSale.Controllers
         public ActionResult Index(EventModel eventname)
         {
             Event.Create(eventname);
-
-            //if (ModelState.IsValid)
-            //{
-            //    db.SchoolName.Add(schoolname);
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
             return View(eventname);
         }
     }
