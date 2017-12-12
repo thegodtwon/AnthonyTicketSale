@@ -30,7 +30,7 @@ namespace TicketSale.DataLayer
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Sql Error: {0}", ex.Message);
             }
         }
     }

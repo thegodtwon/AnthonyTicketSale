@@ -23,14 +23,14 @@ namespace TicketSale.DataLayer
                     using (var command = connection.CreateCommand())
                     {
                         command.CommandType = CommandType.Text;
-                        command.CommandText = string.Format("INSERT INTO Seller (LastName, FirstName) VALUES ('{0}', '{1}')", sellername.LastName, sellername.FirstName, DateTime.UtcNow);
+                        command.CommandText = string.Format("INSERT INTO Seller (LastName, FirstName) VALUES ('{0}', '{1}')", sellername.LastName, sellername.FirstName);
                         command.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Sql Error: {0}", ex.Message);
             }
         }
     }

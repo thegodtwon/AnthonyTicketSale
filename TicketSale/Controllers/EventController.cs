@@ -12,19 +12,19 @@ namespace TicketSale.Controllers
 {
     public class EventController : Controller
     {
-        // GET: School
+        // GET: Event
         [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
-        // POST: School
+        // POST: Event
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(EventModel eventname)
+        public ActionResult Index(EventModel NewEvent)
         {
-            Event.Create(eventname);
-            return View(eventname);
+            Event.Create(NewEvent);
+            return View(NewEvent);
         }
     }
 }

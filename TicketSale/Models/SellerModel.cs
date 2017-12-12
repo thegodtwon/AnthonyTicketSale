@@ -11,5 +11,6 @@ namespace TicketSale.Models
         public int SellerID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+        
     }
 }

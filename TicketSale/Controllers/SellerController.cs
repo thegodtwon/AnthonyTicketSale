@@ -13,19 +13,22 @@ namespace TicketSale.Controllers
     public class SellerController : Controller
     {
 
-        // GET: School
+        //private Seller db = new Seller();
+
+        // GET: Seller
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(int id = 0)
         {
+            //var sellers = db.Event.Where(s => s.EventID == id);
             return View();
         }
-        // POST: School
+        // POST: Seller
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(SellerModel sellername)
+        public ActionResult Index(SellerModel NewSeller)
         {
-            Seller.Create(sellername);
-            return View(sellername);
+            Seller.Create(NewSeller);
+            return View(NewSeller);
         }
         
     }
